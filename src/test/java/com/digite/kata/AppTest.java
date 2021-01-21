@@ -32,7 +32,7 @@ public class AppTest {
     public void testMapsParkedCardToASlot() {
         parkingLot.park("KA-01-HH-1234", "White");
         assertEquals("Gets colour number by Registration", "White",
-                     parkingLot.getColourByRegistrationNumber("KA-01-HH-1234"));
+                parkingLot.getColourByRegistrationNumber("KA-01-HH-1234"));
     }
 
     @Test
@@ -41,8 +41,9 @@ public class AppTest {
         assertEquals("Gets colour number by Registration", "",
                 parkingLot.getColourByRegistrationNumber("KA-01-HH-1234"));
     }
+
     @Test
-    public void testVacantSlot(){
+    public void testVacantSlot() {
         parkingLot.park("KA-01-HH-1231", "White");
         int slotNum = parkingLot.getSlotNumberByRegistrationNumber("KA-01-HH-1231");
         parkingLot.leave(slotNum);
